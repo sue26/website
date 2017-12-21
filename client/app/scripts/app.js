@@ -48,10 +48,10 @@ angular
         controller: 'MovieEditCtrl',
         controllerAs: 'movieEdit'
       })
-      .when('/blog', {
-        templateUrl: 'views/blog.html',
-        controller: 'BlogCtrl',
-        controllerAs: 'blog'
+      .when('/notes', {
+        templateUrl: 'views/notes.html',
+        controller: 'NotesCtrl',
+        controllerAs: 'notes'
       })
       .otherwise({
         redirectTo: '/'

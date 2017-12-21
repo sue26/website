@@ -1,0 +1,32 @@
+<style>
+  .notePosts {
+    border-style: dashed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 20px;
+  }
+  .note {
+    border-style: dotted;
+  }
+  .title {
+
+  }
+  .body {
+
+  }
+  .date {
+
+  }
+</style>
+
+<div ng-controller="NotesCtrl">
+  <div class="notePosts">
+    <div ng-repeat="note in notes" class="note">
+      <h2 class="title">{{note.title}}</h2>
+      <small class="date"><span class="glyphicon glyphicon-time"></span>
+        {{note.date.month}} {{note.date.day}}, {{note.date.year}} </small>
+      <p class="body">{{note.body}}</p>
+      <hr />
+    </div>
+  </div>
+</div>
