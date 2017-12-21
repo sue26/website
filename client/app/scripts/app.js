@@ -13,9 +13,10 @@ angular
     'ngRoute',
     'restangular'
   ])
-  .config(function ($routeProvider, RestangularProvider) {
+  .config(function ($routeProvider, RestangularProvider, $locationProvider) {
 
     RestangularProvider.setBaseUrl('http://localhost:3000');
+    $locationProvider.html5Mode(true);
 
     $routeProvider
       .when('/', {
