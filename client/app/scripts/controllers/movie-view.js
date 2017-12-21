@@ -7,7 +7,7 @@
  * # MovieViewCtrl
  * Controller of the clientApp
  */
-angular.module('clientApp')
+angular.module('mainApp')
   .controller('MovieViewCtrl', function ($scope, $routeParams, Movie) {
     $scope.viewMovie = true;
     $scope.movie = Movie.one($routeParams.id).get().$object;

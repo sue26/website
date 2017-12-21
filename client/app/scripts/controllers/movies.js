@@ -7,7 +7,7 @@
  * # MoviesCtrl
  * Controller of the clientApp
  */
-angular.module('clientApp')
+angular.module('mainApp')
   .controller('MoviesCtrl', function ($scope, Movie) {
     $scope.movies = Movie.getList().$object;
   });

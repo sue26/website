@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the clientApp
  */
-angular.module('clientApp')
+angular.module('mainApp')
   .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

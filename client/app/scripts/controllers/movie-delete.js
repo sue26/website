@@ -7,7 +7,7 @@
  * # MovieDeleteCtrl
  * Controller of the clientApp
  */
-angular.module('clientApp')
+angular.module('mainApp')
   .controller('MovieDeleteCtrl', function ($scope, $routeParams, Movie, $location) {
     $scope.movie = Movie.one($routeParams.id).get().$object;
     $scope.deleteMovie = function () {

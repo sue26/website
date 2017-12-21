@@ -3,7 +3,7 @@
 describe('Controller: MovieEditCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('clientApp'));
+  beforeEach(module('mainApp'));
 
   var MovieEditCtrl,
     scope;

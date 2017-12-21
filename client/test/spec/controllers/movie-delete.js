@@ -3,7 +3,7 @@
 describe('Controller: MovieDeleteCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('clientApp'));
+  beforeEach(module('mainApp'));
 
   var MovieDeleteCtrl,
     scope;

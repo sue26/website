@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name clientApp
+ * @name mainApp
  * @description
  * # clientApp
  *
  * Main module of the application.
  */
 angular
-  .module('clientApp', [
+  .module('mainApp', [
     'ngRoute',
     'restangular'
   ])
