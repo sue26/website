@@ -53,6 +53,16 @@ angular
         controller: 'NotesCtrl',
         controllerAs: 'notes'
       })
+      .when('/note-create', {
+        templateUrl: 'views/note-create.html',
+        controller: 'NoteCreateCtrl',
+        controllerAs: 'noteCreate'
+      })
+      .when('/note-view', {
+        templateUrl: 'views/note-view.html',
+        controller: 'NoteViewCtrl',
+        controllerAs: 'noteView'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -67,6 +77,16 @@ angular
   })
   .factory('Movie', function (MovieRestangular) {
     return MovieRestangular.service('movie');
+  })
+  .factory('NoteRestangular', function (Restangular) {
+    return Restangular.withConfig(function (RestangularConfigurer) {
+      RestangularConfigurer.setRestangularFields({
+        id: '_id'
+      })
+    });
+  })
+  .factory('Note', function (NoteRestangular) {
+    return NoteRestangular.service('note');
   })
   .directive('youtube', function() {
     return {
