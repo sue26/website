@@ -49,6 +49,11 @@ angular
         controller: 'MovieEditCtrl',
         controllerAs: 'movieEdit'
       })
+      .when('/blog', {
+        templateUrl: 'views/blog.html',
+        controller: 'BlogCtrl',
+        controllerAs: 'blog'
+      })
       .otherwise({
         redirectTo: '/'
       });

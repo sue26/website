@@ -24,49 +24,37 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<div class="header">
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
 
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-        <a class="navbar-brand" href="/">SBAE</a>
-
-      </div>
-
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="/"><span class="glyphicon glyphicon-file"></span><br/>Resume</a></li>
-          <li><a ng-href="/movies"><span class="glyphicon glyphicon-list-alt"></span><br/>Projects</a></li>
-          <li><a ng-href="/movies"><span class="glyphicon glyphicon-ice-lolly-tasted"></span><br/>Blog</a></li>
-          <li><a ng-href="/movies"><span class="glyphicon glyphicon-user"></span><br/>About Me</a></li>
-        </ul>
-        <div class="my-navbar-icon navbar-right">
-          <a href="/"><img src="images/linkedin.png" alt="LinkedIn"></a>
-          <a href="/"><img src="images/github.png" alt="GitHub"></a>
-        </div>
-
-        <!--
-        <form class="navbar-form navbar-left" action="/action_page.php">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="search">
-            <div class="input-group-btn">
-              <button class="btn btn-default" type="submit">
-                <i class="glyphicon glyphicon-search"></i>
-              </button>
-            </div>
+    <div class="navbar-header col-sm-4 logo">
+      <a class="navbar-brand" href="/">SBAE</a>
+      <span class="my-navbar-icon">
+        <a href="/"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      </span>
+      <span class="my-navbar-icon">
+        <a href="/"><img src="images/github.png" alt="GitHub"></a>
+      </span>
+      <!--
+      <form class="navbar-form navbar-left" action="/action_page.php">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search" name="search">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
           </div>
-        </form>!-->
-      </div>
+        </div>
+      </form>!-->
     </div>
-  </nav>
-</div>
-
+  <ul class="nav navbar-nav col-sm-8 my-navbar-nav">
+    <li class="col-xs-3"><a href="/"><span class="glyphicon glyphicon-file"></span><br/>Resume</a></li>
+    <li class="col-xs-3"><a ng-href="/movies"><span class="glyphicon glyphicon-list-alt"></span><br/>Projects</a></li>
+    <li class="col-xs-3"><a ng-href="/blog"><span class="glyphicon glyphicon-ice-lolly-tasted"></span><br/>Blog</a></li>
+    <li class="col-xs-3"><a ng-href="/movies"><span class="glyphicon glyphicon-user"></span><br/>About Me</a></li>
+  </ul>
+  </div>
+</nav>
 <div class="container-fluid">
   <div ng-view=""></div>
 </div>
@@ -111,6 +99,7 @@
 <script src="scripts/controllers/movie-view.js"></script>
 <script src="scripts/controllers/movie-delete.js"></script>
 <script src="scripts/controllers/movie-edit.js"></script>
+<script src="scripts/controllers/blog.js"></script>
 <!-- endbuild -->
 </body>
 </html>
