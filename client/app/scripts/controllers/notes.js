@@ -7,7 +7,7 @@
  * # NotesCtrl
  * Controller of the clientApp
  */
-angular.module('mainApp')
+angular.module('clientApp')
   .controller('NotesCtrl', function ($scope, Note) {
     $scope.notes = Note.getList().$object;
   });

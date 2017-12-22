@@ -3,7 +3,7 @@
 describe('Controller: MovieViewCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('mainApp'));
+  beforeEach(module('clientApp'));
 
   var MovieViewCtrl,
     scope;

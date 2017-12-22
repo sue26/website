@@ -7,7 +7,7 @@
  * # MovieAddCtrl
  * Controller of the clientApp
  */
-angular.module('mainApp')
+angular.module('clientApp')
   .controller('MovieAddCtrl', function ($scope, Movie, $location) {
     $scope.movie = {};
     $scope.saveMovie = function() {

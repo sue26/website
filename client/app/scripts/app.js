@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name mainApp
+ * @name clientApp
  * @description
  * # clientApp
  *
  * Main module of the application.
  */
 angular
-  .module('mainApp', [
+  .module('clientApp', [
     'ngRoute',
     'restangular'
   ])
@@ -58,7 +58,7 @@ angular
         controller: 'NoteCreateCtrl',
         controllerAs: 'noteCreate'
       })
-      .when('/note-view', {
+      .when('/note/:id', {
         templateUrl: 'views/note-view.html',
         controller: 'NoteViewCtrl',
         controllerAs: 'noteView'
@@ -67,16 +67,6 @@ angular
         redirectTo: '/'
       });
 
-  })
-  .factory('MovieRestangular', function (Restangular) {
-    return Restangular.withConfig(function (RestangularConfigurer) {
-      RestangularConfigurer.setRestangularFields({
-        id: '_id'
-      });
-    });
-  })
-  .factory('Movie', function (MovieRestangular) {
-    return MovieRestangular.service('movie');
   })
   .factory('NoteRestangular', function (Restangular) {
     return Restangular.withConfig(function (RestangularConfigurer) {

@@ -7,7 +7,7 @@
  * # MovieEditCtrl
  * Controller of the clientApp
  */
-angular.module('mainApp')
+angular.module('clientApp')
   .controller('MovieEditCtrl', function ($scope, $routeParams, Movie, $location) {
     $scope.editMovie = true;
     $scope.movie = {};

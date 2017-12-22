@@ -1,1 +1,7 @@
-<p>This is the note-view view.</p>
+<div ng-controller="NoteViewCtrl">
+  <div class="container">
+    <h1>{{note.title}}</h1>
+    <small><span class="glyphicon glyphicon-time"></span> {{note.date.month}} {{note.date.day}}, {{note.date.year}}</small>
+    <p>{{note.body}}</p>
+  </div>
+</div>

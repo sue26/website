@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the clientApp
  */
-angular.module('mainApp')
+angular.module('clientApp')
   .controller('MainCtrl', function ($scope, $interval, $timeout) {
     // Welcome Statement
     var interval = {
