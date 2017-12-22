@@ -1,1 +1,13 @@
-<p>This is the note-create view.</p>
+
+<form role="form">
+  <div class="form-group">
+    <label for="title" class="control-label">Title</label>
+    <input type="text" ng-model="note.title" class="form-control" id="title" placeholder="New Note">
+  </div>
+  <div class="form-group">
+    <label for="body" class="control-label">Body</label>
+    <textarea ng-model="note.body" class="form-control" id="body" placeholder="This is where it all started...">
+    </textarea>
+</div>
+  <input type="submit" class="btn btn-primary" ng-click="saveNote()" value="Save">
+</form>

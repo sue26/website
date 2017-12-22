@@ -8,10 +8,18 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('NoteCreateCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('NoteCreateCtrl', function ($scope, Note, $location) {
+    $scope.note = {};
+    var today = new Date();
+    var date = {
+      month: today.getMonth() + 1,
+      day: today.getDate(),
+      year: today.getFullYear()
+    };
+    $scope.note.date = date;
+    $scope.saveNote = function() {
+      Note.post($scope.note).then(function() {
+        $location.path("/notes");
+      });
+    };
   });

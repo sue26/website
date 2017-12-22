@@ -53,7 +53,7 @@ angular
         controller: 'NotesCtrl',
         controllerAs: 'notes'
       })
-      .when('/note-create', {
+      .when('/create/note', {
         templateUrl: 'views/note-create.html',
         controller: 'NoteCreateCtrl',
         controllerAs: 'noteCreate'
