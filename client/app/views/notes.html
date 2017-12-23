@@ -1,13 +1,10 @@
 <style>
   .notePosts {
-    border-style: dashed;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
     margin: 20px;
   }
 
   .note {
-    border-style: dotted;
   }
 
   .title {
@@ -30,7 +27,7 @@
     <div ng-repeat="note in notes" class="note">
       <h2 class="title"><a ng-href="/#!/note/{{note._id}}">{{note.title}}</a></h2>
       <small class="date"><span class="glyphicon glyphicon-time"></span>
-        {{note.date.month}} {{note.date.day}}, {{note.date.year}}
+        {{monthInString[note.date.month - 1]}} {{note.date.day}}, {{note.date.year}}
       </small>
       <p class="body">{{note.body}}</p>
       <hr/>

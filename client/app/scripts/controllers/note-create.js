@@ -17,6 +17,8 @@ angular.module('clientApp')
       year: today.getFullYear()
     };
     $scope.note.date = date;
+
+    //Bind fucntions
     $scope.saveNote = function() {
       Note.post($scope.note).then(function() {
         $location.path("/notes");
