@@ -78,7 +78,7 @@ angular
   .factory('Note', function (NoteRestangular) {
     return NoteRestangular.service('note');
   })
-  .directive('youtube', function() {
+  .directive('youtube', function () {
     return {
       restrict: 'E',
       scope: {
@@ -88,7 +88,15 @@ angular
     };
   })
   .filter('trusted', function ($sce) {
-        return function(url) {
-          return $sce.trustAsResourceUrl(url);
+    return function (url) {
+      return $sce.trustAsResourceUrl(url);
     };
+  })
+  .filter('monthToString', function () {
+    return function (num) {
+      var monthInString = ["January", "February", "March", "April",
+        "May", "June", "July", "August", "September",
+        "October", "November", "December"];
+      return monthInString[num-1];
+    }
   });
