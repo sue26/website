@@ -18,4 +18,6 @@ Below is a list of tasks to be completed.
 
 - Others
 [ ] Add to markdown note --> Add two spaces after a line to prompt a new line.
+[ ] Add to markdown note --> Table
+[ ] Add to markdown note --> Horizontal  ( --- or *** or ___)
 
