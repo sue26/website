@@ -14,4 +14,8 @@ Below is a list of tasks to be completed.
 [ ] Delete individual notes not implemented.
 [ ] Edit individual notes not implemented.
 [ ] Only let admin (me!) access create, edit and delete note links.
-[ ] Progress bar that shows sublinks. (Right side of the page)
+[ ] Progress bar that shows sublinks. (Right side of the page).
+
+- Others
+[ ] Add to markdown note --> Add two spaces after a line to prompt a new line.
+
