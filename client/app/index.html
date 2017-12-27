@@ -25,16 +25,18 @@
 
 <!-- Add your site or application content here -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid my-nav-container">
-    <button type="button" class="navbar-toggle my-collapse-button" data-toggle="collapse" data-target=".my-nav-select" >
+  <div class="container-fluid my-nav-container row">
+    <button type="button" class="navbar-toggle my-collapse-button">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <div class="my-nav-select col-xs-6 collapse navbar-collapse" id="myNavbar">
+    <div class="my-nav-select col-xs-6 collapse navbar-collapse">
       <ul class="nav navbar-nav left">
-        <li><a href="/"><img src="images/resume-icon.png" alt="RESUME" class="my-navbar-icon"><br/><span>Resume</span></a></li>
-        <li><a ng-href="/"><img src="images/project-icon.png" alt="PROJECT" class="my-navbar-icon"><br/><span>Projects</span></a>
+        <li><a href="/"><img src="images/resume-icon.png" alt="RESUME"
+                             class="my-navbar-icon"><br/><span>Resume</span></a></li>
+        <li><a ng-href="/"><img src="images/project-icon.png" alt="PROJECT"
+                                class="my-navbar-icon"><br/><span>Projects</span></a>
         </li>
       </ul>
     </div>
@@ -51,15 +53,37 @@
     </div>
 
   </div>
+  <div class="row hidden-sm-up visible" id="toggleMenu">
+    <ul>
+      <li><a href="/" class="col-xs-3 hidden-sm-up visible"><img src="images/resume-icon.png" alt="RESUME"
+                           class="my-navbar-icon"><br /><span>Resume</span></a></li>
+      <li><a ng-href="/" class="col-xs-3"><img src="images/project-icon.png" alt="PROJECT"
+                              class="my-navbar-icon"><br /><span>Projects</span></a>
+      </li>
+      <li><a ng-href="#!/notes" class="col-xs-3"><img src="images/notes-icon.png" alt="NOTES"
+                                     class="my-navbar-icon"><br /><span>Notes</span></a></li>
+      <li><a ng-href="/" class="col-xs-3"><img src="images/aboutme-icon.png" alt="ME"
+                              class="my-navbar-icon"><br /><span>About Me</span></a></li>
+    </ul>
+  </div>
 </nav>
 <!-- script for resizing menu when scrolling down the page!-->
+<!-- script for toggling button (customized)!-->
 <script>
-  $(window).scroll(function() {
-    if ($(document).scrollTop() > 100) {
-      $('.my-nav-container').addClass('shrink');
-    } else {
-      $('.my-nav-container').removeClass('shrink');
-    }
+  $(document).ready(function () {
+    $(document).scrollTop = 0;
+
+    $(window).scroll(function () {
+      if ($(document).scrollTop() > 100) {
+        $('.my-nav-container').addClass('shrink');
+      } else {
+        $('.my-nav-container').removeClass('shrink');
+      }
+    });
+
+    $('.my-collapse-button').click(function () {
+      $("#toggleMenu").slideToggle(100);
+    });
   });
 </script>
 
