@@ -1,6 +1,18 @@
 <div class="container">
-  <h1>{{note.title}}</h1>
-  <small><span class="glyphicon glyphicon-time"></span> {{note.date.month | monthToString}} {{note.date.day}}, {{note.date.year}}
-  </small>
-  <p style="white-space: pre-line;">{{note.body}}</p>
+  <!--navigation tab!-->
+  <div>
+    <ul class="nav nav-tabs">
+      <li class="active"><a ng-href="/#!/note/{{note._id}}">View</a></li>
+      <li><a ng-href="/#!/note/{{note._id}}/edit">Edit</a></li>
+    </ul>
+  </div>
+
+  <!--content!-->
+  <div>
+    <h1>{{note.title}}</h1>
+    <small><span class="glyphicon glyphicon-time"></span> {{note.date.month | monthToString}} {{note.date.day}},
+      {{note.date.year}}
+    </small>
+    <p style="white-space: pre-line;">{{note.body}}</p>
+  </div>
 </div>

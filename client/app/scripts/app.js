@@ -63,6 +63,11 @@ angular
         controller: 'NoteViewCtrl',
         controllerAs: 'noteView'
       })
+      .when('/note/:id/edit', {
+        templateUrl: 'views/note-edit.html',
+        controller: 'NoteEditCtrl',
+        controllerAs: 'noteEdit'
+      })
       .otherwise({
         redirectTo: '/'
       });
