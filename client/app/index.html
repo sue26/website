@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="styles/w3.css">
   <link rel="stylesheet" href="styles/mycss.css">
   <!-- endbuild -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body ng-app="clientApp">
 <!--[if lte IE 8]>
@@ -23,33 +24,45 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid my-nav-container">
-    <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    <button type="button" class="navbar-toggle my-collapse-button" data-toggle="collapse" data-target=".my-nav-select" >
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
-    </button>!-->
-    <div class="my-nav-select col-xs-6">
+    </button>
+    <div class="my-nav-select col-xs-6 collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav left">
-        <li><a href="/"><img src="images/resume-icon.png" alt="RESUME" class="my-navbar-icon"><br/>Resume</a></li>
-        <li><a ng-href="/"><img src="images/project-icon.png" alt="PROJECT" class="my-navbar-icon"><br/>Projects</a></li>
+        <li><a href="/"><img src="images/resume-icon.png" alt="RESUME" class="my-navbar-icon"><br/><span>Resume</span></a></li>
+        <li><a ng-href="/"><img src="images/project-icon.png" alt="PROJECT" class="my-navbar-icon"><br/><span>Projects</span></a>
+        </li>
       </ul>
     </div>
-   <div class="my-nav-main">
-      <a href="/" class="my-logo"><img src="images/logo.png" alt="SBAE" style="border-style: groove"></a>
+    <div class="my-nav-main">
+      <a href="/" class="my-logo"><img src="images/logo.png" alt="SBAE"></a>
     </div>
-    <div class="my-nav-select col-xs-6">
+    <div class="my-nav-select col-xs-6 collapse navbar-collapse">
       <ul class="nav navbar-nav right">
         <li><a ng-href="#!/notes"><img src="images/notes-icon.png" alt="NOTES"
-                                       class="my-navbar-icon"><br/>Notes</a></li>
+                                       class="my-navbar-icon"><br/><span>Notes</span></a></li>
         <li><a ng-href="/"><img src="images/aboutme-icon.png" alt="ME"
-                               class="my-navbar-icon"><br/>About Me</a></li>
+                                class="my-navbar-icon"><br/><span>About Me</span></a></li>
       </ul>
     </div>
 
   </div>
 </nav>
+<!-- script for resizing menu when scrolling down the page!-->
+<script>
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 100) {
+      $('.my-nav-container').addClass('shrink');
+    } else {
+      $('.my-nav-container').removeClass('shrink');
+    }
+  });
+</script>
+
 
 <div class="container-fluid" style="padding-top: 20vh;">
   <div ng-view=""></div>

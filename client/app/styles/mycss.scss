@@ -1,58 +1,96 @@
 .my-nav-container {
   height: 20vh;
   background-color: white;
-  //Vertical-align = middle
+  ////Vertical-align = middle////
   display: flex;
   align-items: center;
-  ///////////
+  ////Animation: resizing menu when scrolling down////
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  ////
+
+  .my-collapse-button {
+    border: none;
+    padding: 20px; //increasing size
+  }
 
   .my-nav-select {
+    width: 100%;
     li {
+      margin:0;
       width: 16vh;
       height: auto;
       text-align: center; //Horizontal-align = center
     }
-    a{
+    a {
       display: block;
       margin-left: auto;
       margin-right: auto;
       border-bottom-style: solid;
-      border-color: white; //invisible
+      border-color: transparent; //invisible
     }
     a:hover {
       opacity: 0.3;
       border-color: #904F45;
     }
+    .my-navbar-icon {
+      width: 50px;
+      height: auto;
+    }
   }
 
   .my-nav-main {
     position: relative;
+    ////horizontal align: center////
+    margin-left: auto;
+    margin-right: auto;
+    ////
     .my-logo {
       display: inline-block;
-
-      img {
-      }
     }
   }
 }
 
-.my-navbar-icon {
-  width: 50px;
-  height: auto;
+.my-nav-container.shrink {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 10vh;
+  .my-nav-select {
+    li {
+      height: 6vh;
+    }
+    a {
+      margin: 0;
+      padding: 0;
+    }
+    span {
+      display: none;
+    }
+  }
+  .my-nav-main {
+    img {
+      height: 50px;
+
+    }
+  }
 }
+
+
 
 .right {
   float: right;
 }
+
 .left {
   float: left;
 }
+
 .my-social-icon {
   img {
     width: 20px;
     height: auto;
   }
 }
+
 body {
   background-color: #FFF0EE;
 }
